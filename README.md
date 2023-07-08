@@ -33,7 +33,7 @@ The [variance][variance] for a [Pareto (Type I)][pareto-distribution] random var
 <!-- <equation class="equation" label="eq:pareto_type1_variance" align="center" raw="\operatorname{Var}\left( X \right) = \begin{cases} \infty & \text{for }\alpha\in(0,2] \\ \frac{\beta^2\alpha}{(\alpha-1)^2(\alpha-2)} & \text{for }\alpha>2 \end{cases}" alt="Variance for a Pareto (Type I) distribution."> -->
 
 ```math
-\operatorname{Var}\left( X \right) = \begin{cases} \infty & \text{for }\alpha\in(0,2] \\ \frac{\beta^2\alpha}{(\alpha-1)^2(\alpha-2)} & \text{for }\alpha>2 \end{cases}
+\mathop{\mathrm{Var}}\left( X \right) = \begin{cases} \infty & \text{for }\alpha\in(0,2] \\ \frac{\beta^2\alpha}{(\alpha-1)^2(\alpha-2)} & \text{for }\alpha>2 \end{cases}
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="\operatorname{Var}\left( X \right) = \begin{cases} \infty &amp; \text{for }\alpha\in(0,2] \\ \frac{\beta^2\alpha}{(\alpha-1)^2(\alpha-2)} &amp; \text{for }\alpha&gt;2 \end{cases}" data-equation="eq:pareto_type1_variance">
@@ -51,38 +51,30 @@ where `α > 0` is the shape parameter and `β > 0` is the scale parameter.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-pareto-type1-variance
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-variance = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-pareto-type1-variance@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var variance = require( 'path/to/vendor/umd/stats-base-dists-pareto-type1-variance/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-pareto-type1-variance@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.variance;
-})();
-</script>
+var variance = require( '@stdlib/stats-base-dists-pareto-type1-variance' );
 ```
 
 #### variance( alpha, beta )
@@ -160,15 +152,10 @@ v = variance( 1.0, -1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-pareto-type1-variance@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var EPS = require( '@stdlib/constants-float64-eps' );
+var variance = require( '@stdlib/stats-base-dists-pareto-type1-variance' );
 
 var alpha;
 var beta;
@@ -181,11 +168,6 @@ for ( i = 0; i < 10; i++ ) {
     v = variance( alpha, beta );
     console.log( 'α: %d, β: %d, Var(X;α,β): %d', alpha.toFixed( 4 ), beta.toFixed( 4 ), v.toFixed( 4 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
