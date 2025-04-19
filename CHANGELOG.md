@@ -34,6 +34,7 @@ A total of 2 issues were closed in this release:
 
 <details>
 
+-   [`11d0e94`](https://github.com/stdlib-js/stdlib/commit/11d0e9428736a83a2e12f6e85620070bcdc28222) - **chore:** clean-up _(by Athan Reines)_
 -   [`1c6ac27`](https://github.com/stdlib-js/stdlib/commit/1c6ac27cb4577739287b86ca6f1110d7e0ed25af) - **feat:** add C implementation for `stats/base/dists/pareto-type1/variance` [(#4017)](https://github.com/stdlib-js/stdlib/pull/4017) _(by Gururaj Gurram, Philipp Burckhardt, stdlib-bot)_
 -   [`4d79bde`](https://github.com/stdlib-js/stdlib/commit/4d79bde011701144a125ba35d58ed42f7ecc5961) - **bench:** refactor random number generation in JS benchmarks for `stats/base/dists/pareto-type1` [(#5260)](https://github.com/stdlib-js/stdlib/pull/5260) _(by GK Bishnoi)_
 
@@ -47,8 +48,9 @@ A total of 2 issues were closed in this release:
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   GK Bishnoi
 -   Gururaj Gurram
 -   Philipp Burckhardt
